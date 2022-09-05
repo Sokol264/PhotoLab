@@ -15,6 +15,7 @@ public:
     void UpdatePicture(TypeImage type, QLabel *picture);
     void InsertCommand(ImageManager::CommandType type, QLabel *picture);
     void RemoveCommand(ImageManager::CommandType type, QLabel *picture);
+    void SetColor(QColor color);
 
 private:
     QImage inputImage, outputImage;

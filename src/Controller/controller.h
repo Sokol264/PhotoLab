@@ -12,6 +12,7 @@ public:
     void UpdatePicture(Facade::TypeImage type, QLabel *picture);
     void InsertCommand(ImageManager::CommandType type, QLabel *picture);
     void RemoveCommand(ImageManager::CommandType type, QLabel *picture);
+    void SetColorCommand(QColor color);
 
 private:
     Facade *facade;

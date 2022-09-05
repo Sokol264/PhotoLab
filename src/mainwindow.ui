@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>592</width>
-    <height>312</height>
+    <width>681</width>
+    <height>241</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>170</y>
+      <y>180</y>
       <width>100</width>
       <height>32</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="saveFileButton">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>170</y>
+      <x>490</x>
+      <y>180</y>
       <width>100</width>
       <height>32</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>20</y>
       <width>250</width>
       <height>150</height>
      </rect>
@@ -87,8 +87,8 @@
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>10</y>
+      <x>420</x>
+      <y>20</y>
       <width>250</width>
       <height>150</height>
      </rect>
@@ -134,8 +134,8 @@
    <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>210</y>
+      <x>290</x>
+      <y>20</y>
       <width>101</width>
       <height>20</height>
      </rect>
@@ -147,14 +147,118 @@
    <widget class="QCheckBox" name="checkBox_2">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>230</y>
+      <x>290</x>
+      <y>40</y>
       <width>101</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>Negative</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>60</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Toning</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>80</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Emboss</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_5">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>100</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sharpen</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_6">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>120</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Box blur</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gaussian blur</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>160</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Laplacian filter</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_9">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>180</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sobel filter</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_10">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>200</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Custom kernel</string>
     </property>
    </widget>
   </widget>

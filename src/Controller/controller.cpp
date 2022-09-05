@@ -18,3 +18,7 @@ void Controller::RemoveCommand(ImageManager::CommandType type, QLabel *picture) 
     facade->RemoveCommand(type, picture);
 }
 
+void Controller::SetColorCommand(QColor color) {
+    facade->SetColor(color);
+}
+

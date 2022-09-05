@@ -28,3 +28,7 @@ void Facade::RemoveCommand(ImageManager::CommandType type, QLabel *picture) {
     UpdatePicture(Output, picture);
 }
 
+void Facade::SetColor(QColor color) {
+    imageManager.SetColor(color);
+}
+
