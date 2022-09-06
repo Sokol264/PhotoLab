@@ -17,22 +17,17 @@ public:
     MainWindow(Controller *controller, QWidget *parent = nullptr);
     ~MainWindow();
 
+private:
+    void ConnectSlots();
+
 private slots:
     void on_openFileButton_clicked();
-    void on_checkBox_stateChanged(int arg1);
-    void on_checkBox_2_stateChanged(int arg1);
+    void checkBoxStateChanged(int state);
+
     void on_checkBox_3_stateChanged(int arg1);
-    void on_checkBox_4_stateChanged(int arg1);
-    void on_checkBox_5_stateChanged(int arg1);
-    void on_checkBox_8_stateChanged(int arg1);
-
-    void on_checkBox_6_stateChanged(int arg1);
-
-    void on_checkBox_7_stateChanged(int arg1);
-
-    void on_checkBox_9_stateChanged(int arg1);
-
     void on_checkBox_10_stateChanged(int arg1);
+
+    void applyKernel(std::vector<std::vector<int>> &kernel);
 
 private:
     Controller *controller;

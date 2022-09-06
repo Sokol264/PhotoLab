@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>681</width>
-    <height>241</height>
+    <height>258</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -131,135 +131,87 @@
      </property>
     </widget>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>290</x>
       <y>20</y>
-      <width>101</width>
-      <height>20</height>
+      <width>116</width>
+      <height>209</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Discoloration</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_2">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>40</y>
-      <width>101</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Negative</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_3">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>60</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Toning</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_4">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>80</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Emboss</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_5">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>100</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sharpen</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_6">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>120</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Box blur</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_7">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>140</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Gaussian blur</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_8">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>160</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Laplacian filter</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_9">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>180</y>
-      <width>91</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sobel filter</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_10">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>200</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Custom kernel</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="checkBox_1">
+       <property name="text">
+        <string>Discoloration</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="text">
+        <string>Negative</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="text">
+        <string>Toning</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="text">
+        <string>Emboss</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_5">
+       <property name="text">
+        <string>Sharpen</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_6">
+       <property name="text">
+        <string>Box Blur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_7">
+       <property name="text">
+        <string>Gaussian Blur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_8">
+       <property name="text">
+        <string>Laplacian Filter</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_9">
+       <property name="text">
+        <string>Sobel Filter</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_10">
+       <property name="text">
+        <string>Custom Kernel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

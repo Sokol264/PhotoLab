@@ -8,7 +8,7 @@
 class ImageManager
 {
 public:
-    enum CommandType { Discoloration = 0, Negative, Toning, Emboss, Sharpen, BoxBlur, GaussianBlur, LaplacianFilter, SobelFilter };
+    enum CommandType { Discoloration = 0, Negative, Toning, Emboss, Sharpen, BoxBlur, GaussianBlur, LaplacianFilter, SobelFilter, CustomFilter };
     ImageManager();
     void SetImage(QImage *image);
     void SetColor(QColor color);

@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     Controller/controller.cpp \
     command.cpp \
+    customkerneldialog.cpp \
     facade.cpp \
     filemanager.cpp \
     imagemanager.cpp \
@@ -20,12 +21,14 @@ SOURCES += \
 HEADERS += \
     Controller/controller.h \
     command.h \
+    customkerneldialog.h \
     facade.h \
     filemanager.h \
     imagemanager.h \
     mainwindow.h
 
 FORMS += \
+    customkerneldialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.
