@@ -15,10 +15,11 @@ public:
     explicit CustomKernelDialog(QWidget *parent = nullptr);
     ~CustomKernelDialog();
 signals:
-    void GetKernel(std::vector<std::vector<int>> &kernel);
+    void GetKernel(std::vector<std::vector<double>> &kernel);
+    void RejectCustomFilter();
 private:
     void UpdateGrid();
-    std::vector<std::vector<int>> kernel;
+    std::vector<std::vector<double>> kernel;
     Ui::CustomKernelDialog *ui;
 private slots:
     void changedGridSize();

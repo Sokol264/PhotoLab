@@ -40,11 +40,11 @@ void CustomKernelDialog::changedGridSize() {
 void CustomKernelDialog::on_buttonBox_accepted() {
     kernel.clear();
     for (int i = 0; i < ui->gridLayout->rowCount(); ++i) {
-        std::vector<int> rowKernel;
+        std::vector<double> rowKernel;
         for (int j = 0; j < ui->gridLayout->columnCount(); ++j) {
             QWidget* widget = ui->gridLayout->itemAt(i * ui->gridLayout->columnCount() + j)->widget();
             auto spinBox = qobject_cast<QSpinBox*>(widget);
-            rowKernel.push_back(spinBox->value());
+            rowKernel.push_back(static_cast<double>(spinBox->value()));
         }
         kernel.push_back(rowKernel);
     }

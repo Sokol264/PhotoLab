@@ -22,3 +22,19 @@ void Controller::SetColorCommand(QColor color) {
     facade->SetColor(color);
 }
 
+void Controller::SetKernelCommand(std::vector<std::vector<double> > &kernel) {
+    facade->SetKernelCommand(kernel);
+}
+
+void Controller::ExecCommand(ImageManager::CommandType type, QLabel *picture) {
+    facade->ExecCommand(type, picture);
+}
+
+void Controller::SetBrightness(int value) {
+    facade->SetBrightness(value);
+}
+
+void Controller::SetContrast(int value) {
+    facade->SetContrast(value);
+}
+

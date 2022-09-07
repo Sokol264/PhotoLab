@@ -16,7 +16,10 @@ public:
     void InsertCommand(ImageManager::CommandType type, QLabel *picture);
     void RemoveCommand(ImageManager::CommandType type, QLabel *picture);
     void SetColor(QColor color);
-
+    void SetKernelCommand(std::vector<std::vector<double>> &kernel);
+    void ExecCommand(ImageManager::CommandType type, QLabel *picture);
+    void SetBrightness(int value);
+    void SetContrast(int value);
 private:
     QImage inputImage, outputImage;
     FileManager fileManager;

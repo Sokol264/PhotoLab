@@ -10,13 +10,8 @@ public:
     virtual ~Command() {}
     explicit Command() : image(nullptr) {}
     virtual void Execute(QImage *image) = 0;
-    void SetColor(QColor color)  { this->color = color; }
-    void SetKernel(std::vector<std::vector<double>> kernel)  { this->kernel = kernel; }
 protected:
     QImage *image;
-    QColor color;
-    std::vector<std::vector<double>> kernel;
-    double coefficient;
 };
 
 class DiscolorationCommand : public Command {
@@ -36,7 +31,9 @@ private:
 class ToningCommand : public Command {
 public:
     void Execute(QImage *image);
+    void SetColor(QColor color)  { this->color = color; }
 private:
+    QColor color;
     QColor ToningColor(QColor &pixel);
 };
 
@@ -44,6 +41,8 @@ class ConvolutionFiltersCommand : public Command {
 public:
     void Execute(QImage *image);
 protected:
+    std::vector<std::vector<double>> kernel;
+    double coefficient = 1;
     QColor ApplyFilter(QImage &image, int index, int jndex);
 };
 
@@ -52,7 +51,6 @@ public:
     EmbossFilterCommand() { kernel = std::vector<std::vector<double>>({{ -2, -1, 0 },
                                                                         { -1, 1, 1 },
                                                                         { 0, 1, 2 }});
-                            coefficient = 1;
                           }
 };
 
@@ -88,7 +86,6 @@ public:
     LaplacianFilterCommand() { kernel = std::vector<std::vector<double>>({{ -1, -1, -1 },
                                                                           { -1, 8, -1 },
                                                                           { -1, -1, -1 }});
-                               coefficient = 1;
                           }
 };
 
@@ -97,9 +94,38 @@ public:
     SobelFilterCommand() { kernel = std::vector<std::vector<double>>({{ 1, 0, -1 },
                                                                     { 2, 0, -2 },
                                                                     { 1, 0, -1 }});
-                           coefficient = 1;
                           }
 
 };
+
+class CustomFilterCommand : public ConvolutionFiltersCommand {
+public:
+    void SetKernel(std::vector<std::vector<double>> kernel)  { this->kernel = kernel; }
+};
+
+class BrightnessChangeCommand : public Command {
+public:
+    void Execute(QImage *image);
+    void SetBrightness(int value) { this->brightness = value; }
+    void SetOriginImage(QImage *image) { this->originImage = *image; }
+private:
+    QImage originImage;
+    QColor CalcNewColor(QColor &pixel);
+    int brightness;
+};
+
+class ContrastChangeCommand : public Command {
+public:
+    void Execute(QImage *image);
+    void SetContrast(int value) { this->contrast = value; }
+    void SetOriginImage(QImage *image) { this->originImage = *image; }
+private:
+    QImage originImage;
+    QColor CalcNewColor(QColor &pixel);
+    int contrast;
+};
+
+
+
 
 #endif // COMMAND_H

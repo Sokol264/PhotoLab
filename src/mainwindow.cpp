@@ -62,15 +62,30 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1) {
 }
 
 void MainWindow::on_checkBox_10_stateChanged(int arg1) {
+    CustomKernelDialog *window = new CustomKernelDialog(this);
     if (arg1) {
-        CustomKernelDialog *window = new CustomKernelDialog();
-        connect(window, SIGNAL(GetKernel(std::vector<std::vector<int>> &)), this, SLOT(applyKernel(std::vector<std::vector<int>> &)));
-
+        connect(window, SIGNAL(GetKernel(std::vector<std::vector<double>> &)), this, SLOT(applyKernel(std::vector<std::vector<double>> &)));
         window->show();
         std::vector<std::vector<int>> kernel;
+    } else {
+        controller->RemoveCommand(ImageManager::CustomFilter, ui->outputImage);
     }
 }
 
-void MainWindow::applyKernel(std::vector<std::vector<int>> &kernel) {
+void MainWindow::applyKernel(std::vector<std::vector<double>> &kernel) {
+    controller->SetKernelCommand(kernel);
     controller->InsertCommand(ImageManager::CustomFilter, ui->outputImage);
 }
+
+
+void MainWindow::on_brightnessSlider_valueChanged(int value) {
+    controller->SetBrightness(ui->brightnessSlider->value());
+    controller->ExecCommand(ImageManager::BrightnessChange, ui->outputImage);
+}
+
+
+void MainWindow::on_constrastSlider_valueChanged(int value) {
+    controller->SetContrast(ui->constrastSlider->value());
+    controller->ExecCommand(ImageManager::ContrastChange, ui->outputImage);
+}
+
